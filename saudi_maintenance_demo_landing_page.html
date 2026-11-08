@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Amana Maintenance & Repair Services | Saudi Arabia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saudi: {
+                            green: '#006C35',
+                            gold: '#D4AF37',
+                            navy: '#0F172A',
+                            accent: '#F59E0B',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        en: ['Inter', 'sans-serif'],
+                        ar: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .rtl {
+            direction: rtl;
+            font-family: 'Cairo', sans-serif;
+        }
+        .ltr {
+            direction: ltr;
+            font-family: 'Inter', sans-serif;
+        }
+        .whatsapp-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body id="body" class="ltr bg-slate-50 text-slate-800 antialiased selection:bg-saudi-gold selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-saudi-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-slate-700">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded-full text-xs animate-pulse">24/7 AVAILABLE</span>
+                <span data-en="⚡ Emergency Electrical & Plumbing Services across Saudi Arabia" data-ar="⚡ خدمات كهرباء وسباكة طوارئ على مدار 24 ساعة في جميع أنحاء المملكة">⚡ Emergency Electrical & Plumbing Services across Saudi Arabia</span>
+            </div>
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <span class="hidden md:inline text-slate-300">
+                    <i class="fa-solid fa-location-dot text-amber-400 me-1"></i> Riyadh | Jeddah | Dammam | Khobar
+                </span>
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-400/40 px-3 py-1 rounded-md text-xs font-bold transition flex items-center space-x-1 rtl:space-x-reverse">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langBtnText">العربية</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <div class="bg-gradient-to-tr from-saudi-green to-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-2xl shadow-md font-bold">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-extrabold text-slate-900 block leading-tight">
+                            AL-AMANA <span class="text-saudi-green">KSA</span>
+                        </span>
+                        <span class="text-xs text-slate-500 font-medium block" data-en="Home Maintenance & Electrical" data-ar="خدمات الصيانة المنزلية والكهرباء">Home Maintenance & Electrical</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 rtl:space-x-reverse font-semibold text-sm text-slate-700">
+                    <a href="#services" class="hover:text-saudi-green transition" data-en="Services" data-ar="خدماتنا">Services</a>
+                    <a href="#why-us" class="hover:text-saudi-green transition" data-en="Why Choose Us" data-ar="لماذا نحن">Why Choose Us</a>
+                    <a href="#booking" class="hover:text-saudi-green transition" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
+                    <a href="#reviews" class="hover:text-saudi-green transition" data-en="Reviews" data-ar="التقييمات">Reviews</a>
+                </nav>
+
+                <!-- Quick Action Header CTAs -->
+                <div class="hidden sm:flex items-center space-x-3 rtl:space-x-reverse">
+                    <a href="tel:+966500000000" class="flex items-center space-x-2 rtl:space-x-reverse bg-slate-100 hover:bg-slate-200 text-slate-900 px-4 py-2.5 rounded-lg font-bold text-sm transition border border-slate-300">
+                        <i class="fa-solid fa-phone text-saudi-green"></i>
+                        <span>+966 50 000 0000</span>
+                    </a>
+                    <a href="https://wa.me/966500000000" target="_blank" class="flex items-center space-x-2 rtl:space-x-reverse bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg font-bold text-sm transition shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span data-en="WhatsApp Us" data-ar="واتساب مباشر">WhatsApp Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-saudi-navy text-white py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left rtl:lg:text-right">
+                    <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-saudi-green/20 border border-saudi-green/40 px-3 py-1 rounded-full text-emerald-400 text-xs sm:text-sm font-semibold">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span data-en="Trusted Home Technicians in KSA" data-ar="فنيين موثوقين لصيانة المنازل في السعودية">Trusted Home Technicians in KSA</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white" data-en="Fast & Reliable Electrical, Plumbing & Maintenance Services" data-ar="خدمات كهرباء وسباكة وصيانة منزلية سريعة وموثوقة">
+                        Fast & Reliable Electrical, Plumbing & Maintenance Services
+                    </h1>
+
+                    <p class="text-base sm:text-xl text-slate-300 max-w-2xl font-normal" data-en="Professional repair and installation services at your doorstep within 30 minutes in Riyadh, Jeddah, Dammam & surrounding areas." data-ar="خدمات إصلاح وتثبيت احترافية تصل إلى باب بيتك خلال 30 دقيقة في الرياض، جُدة، الدمام والخبر.">
+                        Professional repair and installation services at your doorstep within 30 minutes in Riyadh, Jeddah, Dammam & surrounding areas.
+                    </p>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-2 grid grid-cols-3 gap-4 border-y border-slate-800 py-4 max-w-xl mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">30 Min</div>
+                            <div class="text-xs text-slate-400" data-en="Fast Response" data-ar="سرعة وصول">Fast Response</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
+                            <div class="text-xs text-slate-400" data-en="Satisfaction" data-ar="ضمان العمل">Satisfaction</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">5,000+</div>
+                            <div class="text-xs text-slate-400" data-en="Jobs Done" data-ar="عملية صيانة">Jobs Done</div>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="tel:+966500000000" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-lg px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center space-x-3 rtl:space-x-reverse">
+                            <i class="fa-solid fa-phone-volume text-xl"></i>
+                            <span data-en="Call Now: +966 50 000 0000" data-ar="اتصل الآن: 0500000000">Call Now: +966 50 000 0000</span>
+                        </a>
+                        <a href="https://wa.me/966500000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center space-x-3 rtl:space-x-reverse">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span data-en="WhatsApp Urgent Booking" data-ar="حجز سريع عبر الواتساب">WhatsApp Urgent Booking</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Booking Form Card -->
+                <div class="lg:col-span-5 bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100" id="booking">
+                    <div class="text-center mb-6">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-en="Quick Dispatch" data-ar="خدمة فورية">Quick Dispatch</span>
+                        <h3 class="text-2xl font-bold mt-2" data-en="Request Technician Now" data-ar="أطلب فني الآن">Request Technician Now</h3>
+                        <p class="text-xs text-slate-500 mt-1" data-en="Fill out this form & get a technician in 30 mins" data-ar="عبي البيانات وسيصلك الفني خلال 30 دقيقة">Fill out this form & get a technician in 30 mins</p>
+                    </div>
+
+                    <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-en="Your Full Name" data-ar="الاسم الكامل">Your Full Name</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 rtl:right-0 rtl:left-auto flex items-center px-3 text-slate-400">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" required placeholder="e.g. Abdullah Ahmed" class="w-full pl-10 rtl:pr-10 rtl:pl-3 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-saudi-green focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-en="Saudi Mobile Number" data-ar="رقم الجوال السعودي">Saudi Mobile Number</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 rtl:right-0 rtl:left-auto flex items-center px-3 text-slate-400 font-semibold text-xs">
+                                    +966
+                                </span>
+                                <input type="tel" required pattern="[0-9]{9}" placeholder="5X XXX XXXX" class="w-full pl-14 rtl:pr-14 rtl:pl-3 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-saudi-green focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-en="Select City" data-ar="اختر المدينة">Select City</label>
+                                <select class="w-full py-3 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-saudi-green focus:outline-none text-sm bg-white">
+                                    <option value="Riyadh">Riyadh (الرياض)</option>
+                                    <option value="Jeddah">Jeddah (جدة)</option>
+                                    <option value="Dammam">Dammam (الدمام)</option>
+                                    <option value="Khobar">Khobar (الخبر)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-en="Service Needed" data-ar="نوع الخدمة">Service Needed</label>
+                                <select class="w-full py-3 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-saudi-green focus:outline-none text-sm bg-white">
+                                    <option value="Electrical" data-en="Electrical Work" data-ar="كهرباء">Electrical Work</option>
+                                    <option value="Plumbing" data-en="Plumbing Work" data-ar="سباكة">Plumbing Work</option>
+                                    <option value="AC Maintenance" data-en="AC Maintenance" data-ar="صيانة مكيفات">AC Maintenance</option>
+                                    <option value="Handyman" data-en="General Repairs" data-ar="صيانة عامة">General Repairs</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1" data-en="Urgency Level" data-ar="درجة الأهمية">Urgency Level</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="border border-red-200 bg-red-50 p-2.5 rounded-lg flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                                    <input type="radio" name="urgency" value="Emergency" checked class="text-red-600 focus:ring-red-500">
+                                    <span class="text-xs font-bold text-red-700" data-en="🚨 Emergency (NOW)" data-ar="🚨 طوارئ (فوراً)">🚨 Emergency (NOW)</span>
+                                </label>
+                                <label class="border border-slate-200 p-2.5 rounded-lg flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                                    <input type="radio" name="urgency" value="Scheduled" class="text-saudi-green focus:ring-saudi-green">
+                                    <span class="text-xs font-bold text-slate-700" data-en="📅 Today / Later" data-ar="📅 اليوم / لاحقاً">📅 Today / Later</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-saudi-green hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-xl transition shadow-lg text-base">
+                            <span data-en="Confirm & Send Request" data-ar="تأكيد وإرسال الطلب">Confirm & Send Request</span>
+                            <i class="fa-solid fa-arrow-right rtl:rotate-180 ms-2"></i>
+                        </button>
+                    </form>
+
+                    <!-- Confirmation Message (Hidden by default) -->
+                    <div id="formSuccess" class="hidden text-center py-8 space-y-4">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900" data-en="Request Received!" data-ar="تم استلام طلبك بنجاح!">Request Received!</h4>
+                        <p class="text-sm text-slate-600" data-en="Our local team technician will contact you via phone/WhatsApp within 5 minutes." data-ar="سيتواصل معك الفني المتخصص عبر الجوال أو الواتساب خلال 5 دقائق.">
+                            Our local team technician will contact you via phone/WhatsApp within 5 minutes.
+                        </p>
+                        <button onclick="resetForm()" class="text-xs font-bold text-saudi-green underline" data-en="Submit Another Request" data-ar="إرسال طلب آخر">Submit Another Request</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Services Grid Section -->
+    <section id="services" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-saudi-green font-bold text-sm uppercase tracking-wider" data-en="Comprehensive Home Solutions" data-ar="حلول منزلية متكاملة">Comprehensive Home Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2" data-en="Our Core Maintenance Services" data-ar="خدمات الصيانة الأساسية">Our Core Maintenance Services</h2>
+                <p class="text-slate-600 mt-3" data-en="Skilled technicians available for fast household repair, installation, and inspection across Saudi Arabia." data-ar="فنيون ماهرون متاحون للإصلاح المنزلي السريع، التركيب، والفحص في جميع أنحاء المملكة.">
+                    Skilled technicians available for fast household repair, installation, and inspection across Saudi Arabia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Service 1: Electrical -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:border-amber-400 transition group">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-en="Electrical Services" data-ar="أعمال الكهرباء">Electrical Services</h3>
+                    <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Short circuit & breaker repair" data-ar="إصلاح شورت الكابلات والقواطع">Short circuit & breaker repair</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Lighting & chandelier installation" data-ar="تركيب الإضاءة والنجف">Lighting & chandelier installation</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="DB board wiring & upgrades" data-ar="صيانة وتعديل طبلون الكهرباء">DB board wiring & upgrades</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Socket & switch replacements" data-ar="تركيب الأفياش والمفاتيح">Socket & switch replacements</span></li>
+                    </ul>
+                    <a href="https://wa.me/966500000000?text=I%20need%20Electrical%20Service" target="_blank" class="w-full block text-center bg-slate-900 group-hover:bg-amber-500 group-hover:text-slate-950 text-white font-bold py-2.5 rounded-lg text-sm transition" data-en="Book Electrician" data-ar="طلب فني كهرباء">
+                        Book Electrician
+                    </a>
+                </div>
+
+                <!-- Service 2: Plumbing -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:border-blue-400 transition group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-faucet-drip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-en="Plumbing Works" data-ar="أعمال السباكة">Plumbing Works</h3>
+                    <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Pipe leak repair & water pumps" data-ar="إصلاح تسريبات المياه والمضخات">Pipe leak repair & water pumps</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Water heater installation" data-ar="تركيب وصيانة السخانات">Water heater installation</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Drain unblocking & blockage fix" data-ar="تسليك المجاري والمغاسل">Drain unblocking & blockage fix</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Sanitary fixture fittings" data-ar="تركيب أدوات السباكة والحمامات">Sanitary fixture fittings</span></li>
+                    </ul>
+                    <a href="https://wa.me/966500000000?text=I%20need%20Plumbing%20Service" target="_blank" class="w-full block text-center bg-slate-900 group-hover:bg-blue-600 group-hover:text-white text-white font-bold py-2.5 rounded-lg text-sm transition" data-en="Book Plumber" data-ar="طلب فني سباكة">
+                        Book Plumber
+                    </a>
+                </div>
+
+                <!-- Service 3: AC Maintenance -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:border-emerald-400 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-en="AC Repair & Washing" data-ar="صيانة وتنظيف مكيفات">AC Repair & Washing</h3>
+                    <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Split & Window AC repair" data-ar="إصلاح مكيفات السبلت والشباك">Split & Window AC repair</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Freon gas refill & pressure check" data-ar="تعبئة فريون واختبار الضغط">Freon gas refill & pressure check</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Deep jet washing & filter cleaning" data-ar="تنظيف وغسيل المكيفات بالضغط">Deep jet washing & filter cleaning</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Compressor replacement" data-ar="استبدال وصيانة الكمبروسر">Compressor replacement</span></li>
+                    </ul>
+                    <a href="https://wa.me/966500000000?text=I%20need%20AC%20Service" target="_blank" class="w-full block text-center bg-slate-900 group-hover:bg-emerald-600 group-hover:text-white text-white font-bold py-2.5 rounded-lg text-sm transition" data-en="Book AC Tech" data-ar="طلب فني مكيفات">
+                        Book AC Tech
+                    </a>
+                </div>
+
+                <!-- Service 4: General Handyman -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:border-purple-400 transition group">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-toolbox"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-en="Handyman & Appliance" data-ar="صيانة عامة وأجهزة">Handyman & Appliance</h3>
+                    <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="TV wall mounting & shelf fixing" data-ar="تركيب الشاشات والرفوف">TV wall mounting & shelf fixing</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Washing machine & fridge repair" data-ar="إصلاح الغسالات والثلاجات">Washing machine & fridge repair</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Door lock replacement & carpentry" data-ar="تغيير أقفال الأبواب والنجارة">Door lock replacement & carpentry</span></li>
+                        <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-saudi-green text-xs"></i><span data-en="Painting & touch-ups" data-ar="دهان وترميمات بسيطة">Painting & touch-ups</span></li>
+                    </ul>
+                    <a href="https://wa.me/966500000000?text=I%20need%20Handyman%20Service" target="_blank" class="w-full block text-center bg-slate-900 group-hover:bg-purple-600 group-hover:text-white text-white font-bold py-2.5 rounded-lg text-sm transition" data-en="Book Handyman" data-ar="طلب فني صيانة عامة">
+                        Book Handyman
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-amber-400 font-bold text-sm uppercase tracking-wider" data-en="Why Saudi Homeowners Trust Us" data-ar="لماذا يثق بنا العملاء في السعودية">Why Saudi Homeowners Trust Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight" data-en="Fast Turnaround, Fair Prices & Qualified Technicians" data-ar="سرعة بالوصول، أسعار عادلة وفنيون مؤهلون">
+                        Fast Turnaround, Fair Prices & Qualified Technicians
+                    </h2>
+                    <p class="text-slate-300" data-en="We understand how frustrating a plumbing leak or electrical failure can be in Saudi heat. Our localized team responds instantly to resolve issues safely." data-ar="نعلم مدى صعوبة مشاكل الكهرباء والسباكة خصوصاً في أجواء المملكة. فريقنا المحلي المخصص يستجيب فوراً لحل كافة المشاكل بأمان وكفاءة.">
+                        We understand how frustrating a plumbing leak or electrical failure can be in Saudi heat. Our localized team responds instantly to resolve issues safely.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3 rtl:space-x-reverse bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-clock text-amber-400 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-base" data-en="30 Min Arrival" data-ar="وصول خلال 30 دقيقة">30 Min Arrival</h4>
+                                <p class="text-xs text-slate-400 mt-1" data-en="Quick emergency response team nearby your location" data-ar="فريق طوارئ قريب من موقعك للوصول السريع">Quick emergency response team nearby your location</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 rtl:space-x-reverse bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-coins text-amber-400 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-base" data-en="Transparent Pricing" data-ar="أسعار واضحة ومحددة">Transparent Pricing</h4>
+                                <p class="text-xs text-slate-400 mt-1" data-en="Upfront quotes before work starts. No hidden costs" data-ar="تسعير واضح قبل بدء العمل بدون أي مصاريف خفية">Upfront quotes before work starts. No hidden costs</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 rtl:space-x-reverse bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-certificate text-amber-400 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-base" data-en="Certified Experts" data-ar="فنيين متخصصين ومكفولين">Certified Experts</h4>
+                                <p class="text-xs text-slate-400 mt-1" data-en="Experienced electricians & plumbers with tools" data-ar="فنيين ذوي خبرة عالية ومجهزين بأحدث المعدات">Experienced electricians & plumbers with tools</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 rtl:space-x-reverse bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-thumbs-up text-amber-400 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-base" data-en="Work Guarantee" data-ar="ضمان على الصيانة">Work Guarantee</h4>
+                                <p class="text-xs text-slate-400 mt-1" data-en="30 days service warranty on all completed repairs" data-ar="ضمان 30 يوم على جميع عمليات الإصلاح">30 days service warranty on all completed repairs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Call Banner Card -->
+                <div class="bg-gradient-to-br from-saudi-green to-emerald-800 p-8 rounded-3xl shadow-2xl border border-emerald-500/30 text-center space-y-6">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto text-4xl text-amber-300">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold" data-en="Need Emergency Repair Right Now?" data-ar="تحتاج صيانة طارئة الآن؟">Need Emergency Repair Right Now?</h3>
+                    <p class="text-emerald-100 text-sm max-w-md mx-auto" data-en="Our local technicians are active in Riyadh, Jeddah & Dammam. Call directly or chat via WhatsApp for instant response." data-ar="فنيونا متواجدون الآن في الرياض، جدة والدمام. اتصل مباشرة أو تواصل عبر الواتساب للوصول الفوري.">
+                        Our local technicians are active in Riyadh, Jeddah & Dammam. Call directly or chat via WhatsApp for instant response.
+                    </p>
+
+                    <div class="pt-4 space-y-3">
+                        <a href="tel:+966500000000" class="block w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-4 rounded-xl shadow-lg transition text-lg">
+                            <i class="fa-solid fa-phone me-2"></i> +966 50 000 0000
+                        </a>
+                        <a href="https://wa.me/966500000000" target="_blank" class="block w-full bg-slate-950 hover:bg-slate-900 text-white font-bold py-3.5 rounded-xl transition text-base">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 me-2"></i> WhatsApp Dispatch Chat
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-saudi-green font-bold text-sm uppercase tracking-wider" data-en="Real Client Feedback" data-ar="آراء العملاء">Real Client Feedback</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2" data-en="What People in Saudi Say About Us" data-ar="ماذا يقول عملاؤنا في المملكة">What People in Saudi Say About Us</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex text-amber-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-6" data-en="“Had a major DB electrical tripping problem late night in Riyadh. Technician arrived in 25 minutes and fixed the breaker immediately. Highly recommended!”" data-ar="“حدثت مشكلة انقطاع كهرباء في الشقة في وقت متأخر بالرياض. وصل الفني خلال 25 دقيقة وقام بإصلاح القاطع فوراً. خدمة ممتازة جداً!”">
+                        “Had a major DB electrical tripping problem late night in Riyadh. Technician arrived in 25 minutes and fixed the breaker immediately. Highly recommended!”
+                    </p>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">م</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Mohammed Al-Otaibi</h4>
+                            <span class="text-xs text-slate-400">Riyadh (الرياض)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex text-amber-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-6" data-en="“Plumbing leakage under kitchen sink was fixed quickly. Honest pricing and very clean work. Will definitely use again for AC washing.”" data-ar="“تم إصلاح تسريب المياه تحت مغسلة المطبخ بسرعة. السعر كان مناسب والعمل نظيف جداً. سأتعامل معهم بالتأكيد لغسيل المكيفات.”">
+                        “Plumbing leakage under kitchen sink was fixed quickly. Honest pricing and very clean work. Will definitely use again for AC washing.”
+                    </p>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">A</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Ahmed Tariq</h4>
+                            <span class="text-xs text-slate-400">Jeddah (جدة)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex text-amber-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-6" data-en="“Best AC technicians in Dammam! Jet washed 4 split ACs and refilled freon gas. Cooling is like brand new now.”" data-ar="“أفضل فنيين مكيفات في الدمام! قاموا بغسيل 4 مكيفات سبليت وتعبئة الفريون. التبريد ممتاز جداً الآن.”">
+                        “Best AC technicians in Dammam! Jet washed 4 split ACs and refilled freon gas. Cooling is like brand new now.”
+                    </p>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">س</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Sami Al-Ghamdi</h4>
+                            <span class="text-xs text-slate-400">Dammam (الدمام)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+                <div>
+                    <span class="text-xl font-bold text-white block mb-3">AL-AMANA KSA</span>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-en="Your trusted partner for 24/7 electrical, plumbing, AC, and general home repair services across major cities in Saudi Arabia." data-ar="شريكك الموثوق لخدمات الكهرباء، السباكة، المكيفات والصيانة المنزلية على مدار 24 ساعة في مختلف مدن المملكة.">
+                        Your trusted partner for 24/7 electrical, plumbing, AC, and general home repair services across major cities in Saudi Arabia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3" data-en="Service Areas" data-ar="مناطق الخدمة">Service Areas</h4>
+                    <ul class="text-xs space-y-1 text-slate-400">
+                        <li>Riyadh (الرياض)</li>
+                        <li>Jeddah (جدة)</li>
+                        <li>Dammam & Khobar (الدمام والخبر)</li>
+                        <li>Makkah & Madinah (مكة والمدينة)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3" data-en="Direct Contact" data-ar="التواصل المباشر">Direct Contact</h4>
+                    <p class="text-xs text-slate-400 mb-2" data-en="Call or WhatsApp for immediate booking:" data-ar="اتصل أو راسلنا عبر الواتساب للحجز الفوري:">Call or WhatsApp for immediate booking:</p>
+                    <a href="tel:+966500000000" class="text-amber-400 font-bold text-base block mb-1">+966 50 000 0000</a>
+                    <span class="text-xs text-emerald-400 block"><i class="fa-solid fa-circle text-[8px] me-1"></i> Available 24 Hours / 7 Days</span>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-xs text-slate-500">
+                &copy; <span id="year"></span> Al-Amana Maintenance KSA. All rights reserved. Demo Landing Page.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Persistent Floating Conversion Bar (Sticky Bottom for Mobile & Desktop) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-900/90 backdrop-blur-md border-t border-slate-800 sm:hidden">
+        <div class="grid grid-cols-2 gap-2">
+            <a href="tel:+966500000000" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl flex items-center justify-center space-x-2 text-sm">
+                <i class="fa-solid fa-phone"></i>
+                <span data-en="Call Now" data-ar="اتصال مباشر">Call Now</span>
+            </a>
+            <a href="https://wa.me/966500000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl flex items-center justify-center space-x-2 text-sm whatsapp-pulse">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span data-en="WhatsApp" data-ar="واتساب سريع">WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Desktop Floating WhatsApp Badge -->
+    <a href="https://wa.me/966500000000" target="_blank" class="hidden sm:flex fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl whatsapp-pulse items-center justify-center transition">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            const body = document.getElementById('body');
+            const langBtnText = document.getElementById('langBtnText');
+            const elements = document.querySelectorAll('[data-en]');
+
+            if (currentLang === 'en') {
+                // Switch to Arabic (RTL)
+                currentLang = 'ar';
+                body.classList.remove('ltr');
+                body.classList.add('rtl');
+                langBtnText.textContent = 'English';
+
+                elements.forEach(el => {
+                    const arText = el.getAttribute('data-ar');
+                    if (arText) {
+                        el.textContent = arText;
+                    }
+                });
+            } else {
+                // Switch to English (LTR)
+                currentLang = 'en';
+                body.classList.remove('rtl');
+                body.classList.add('ltr');
+                langBtnText.textContent = 'العربية';
+
+                elements.forEach(el => {
+                    const enText = el.getAttribute('data-en');
+                    if (enText) {
+                        el.textContent = enText;
+                    }
+                });
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('leadForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            document.getElementById('leadForm').reset();
+            document.getElementById('leadForm').classList.remove('hidden');
+            document.getElementById('formSuccess').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
